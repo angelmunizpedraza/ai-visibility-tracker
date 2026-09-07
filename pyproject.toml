@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-visibility-tracker"
+version = "0.1.0"
+description = "Measure how often a brand is mentioned and cited by ChatGPT, Perplexity and Claude, track share of voice over time, and analyse AI-crawler traffic in server logs."
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Ángel Muñiz Pedraza"}]
+requires-python = ">=3.10"
+dependencies = ["requests>=2.31"]
+keywords = ["seo", "geo", "generative-engine-optimization", "ai-visibility", "chatgpt", "perplexity", "share-of-voice", "log-analysis"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Topic :: Internet :: WWW/HTTP :: Indexing/Search",
+]
+
+[project.optional-dependencies]
+yaml = ["pyyaml>=6"]
+dev = ["pytest>=8", "pyyaml>=6"]
+
+[project.scripts]
+aivis = "ai_visibility_tracker.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["ai_visibility_tracker*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

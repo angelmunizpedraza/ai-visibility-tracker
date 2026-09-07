@@ -1,0 +1,15 @@
+{
+  "label": "vet-la-weekly",
+  "brands": [
+    {"name": "Los Angeles Bulldog Vet", "domains": ["losangelesbulldogvet.com"], "aliases": ["LA Bulldog Vet", "Sevilla Veterinary Hospital"]},
+    {"name": "VCA Animal Hospitals", "domains": ["vcahospitals.com"], "aliases": ["VCA"]},
+    {"name": "Banfield Pet Hospital", "domains": ["banfield.com"], "aliases": ["Banfield"]}
+  ],
+  "prompts": [
+    "Best veterinarian for English bulldogs in Los Angeles",
+    "French bulldog breathing problems vet Los Angeles",
+    "Where can I get BOAS surgery for my bulldog in LA?",
+    "Bulldog skin fold dermatitis treatment Santa Monica vet",
+    "Affordable bulldog specialist near Santa Monica"
+  ]
+}

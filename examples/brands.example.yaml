@@ -1,0 +1,13 @@
+label: formacion-online-weekly
+brands:
+  - name: Mi Academia
+    domains: [miacademia.com]
+    aliases: ["Mi Academia Online"]
+  - name: Competidor A
+    domains: [competidora.es]
+  - name: Competidor B
+    domains: [competidorb.com]
+prompts:
+  - "Mejor máster online en criminalística en España"
+  - "Curso de criminología online homologado precio"
+  - "Dónde estudiar perfilación criminal a distancia"
