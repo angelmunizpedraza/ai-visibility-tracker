@@ -1,0 +1,24 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - run: pip install -e ".[dev]"
+      - run: pytest -q
+      - name: Smoke test CLI (no API keys needed)
+        run: |
+          aivis --version
+          aivis track --config examples/brands.example.json --providers chatgpt,perplexity,claude --dry-run --db /tmp/v.db --md /tmp/r.md
+          aivis logs examples/access.sample.log --md /tmp/c.md
+          head -5 /tmp/c.md
